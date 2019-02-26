@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-    @teachers = User.where(role: "teacher")
+    # if current_user.teacher
+    #   @users = User.all
+    # else
+    #   @teachers = User.where(role: "teacher")
+    # end
   end
 
   def show
