@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.teacher_id = User.find(params["booking"]["teacher_id"].to_i).id
     @booking.student_id = current_user.id
     if @booking.save
-      redirect_to user_booking_path(current_user,@booking)
+      redirect_to user_booking_path(current_user, @booking)
     else
       redirect_to users_path()
     end
