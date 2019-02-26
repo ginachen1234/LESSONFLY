@@ -9,7 +9,13 @@
 puts "Seeding"
 
 5.times do
-  User.create!(first_name: Faker::Name.name, last_name: Faker::Name.name, email: Faker::Internet.email, password: Faker::Name.name, role: "teacher")
+  User.create!(
+                first_name: Faker::Name.name,
+                last_name: Faker::Name.name,
+                email: Faker::Internet.email,
+                password: Faker::Internet.password,
+                role: "teacher"
+                )
 end
 
 puts "Seed done!"
