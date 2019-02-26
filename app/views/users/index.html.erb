@@ -1,5 +1,5 @@
-
 <div class="main-cointainer">
+
   <div class="cards">
   <% @teachers.each do |user| %>
 
@@ -7,14 +7,17 @@
       <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
       <div class="card-teacher-infos">
         <div>
-          <h2><%= link_to user.first_name, user_path(user) %></h2>
-          <p><%= user.email %></p>
+          <h2><%= link_to user.skill, user_path(user) %></h2>
+          <p><%= user.first_name %></p>
         </div>
-        <h2 class="card-teacher-pricing">£42/hour</h2>
-        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-teachers-user avatar-bordered"/>
+        <h2 class="card-teacher-pricing">£ <%= (20..50).to_a.sample %>/hr</h2>
       </div>
     </div>
-
   <% end %>
   </div>
+
+
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.346,48.8595,11.72,0,0/600x1000?access_token=pk.eyJ1IjoianVsaW9lcTI5IiwiYSI6ImNqcnc2d3R4MjA4czY0OW9hZWhlMzk2Nm8ifQ.6eEUl4ONh8EzfaIgCF_khg'>
+
+
 </div>
