@@ -1,18 +1,19 @@
-
-
-
-
-<div class="container d-flex justify-content-between">
+<div class="main-cointainer">
+  <div class="cards">
   <% @teachers.each do |user| %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Teacher</h5>
-        <h6 class="card-subtitle mb-2 text-muted"><%= link_to user.first_name, user_path(user) %></h6>
-        <h6 class="card-subtitle mb-2 text-muted"><%= user.email %></h6>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-  </div>
-  <% end %>
-</div>
 
+    <div class="card-teacher">
+      <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <div class="card-teacher-infos">
+        <div>
+          <h2><%= link_to user.first_name, user_path(user) %></h2>
+          <p><%= user.email %></p>
+        </div>
+        <h2 class="card-teacher-pricing">£42/hour</h2>
+        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-teachers-user avatar-bordered"/>
+      </div>
+    </div>
+
+  <% end %>
+  </div>
+</div>
