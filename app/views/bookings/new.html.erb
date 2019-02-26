@@ -1,0 +1,11 @@
+
+
+<p>You are going to make a booking with<%= @teacher.first_name %> <%= @teacher.last_name %></p>
+
+<%= simple_form_for [@user, @booking] do |f| %>
+  <%= f.input :teacher_id, :as => :hidden, :input_html => { :value => @teacher.id }%>
+  <%= f.submit "Confirm booking", class: "btn btn-primary" %>
+<% end %>
+
+
+<%= link_to "All teachers", users_path, class: "btn btn-primary" %>

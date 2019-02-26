@@ -24,6 +24,8 @@ end
     last_name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
+    skill: Faker::Educator.subject,
+    location: Faker::Address.city,
     teacher: true
     )
 end

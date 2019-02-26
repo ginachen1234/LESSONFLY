@@ -1,10 +1,22 @@
-  <h1><%= @user.first_name %></h1>
-  <p><%= @user.last_name %></p>
-  <p><%= @user.email %></p>
-  <% if @user.teacher %>
-    <p>Teacher</p>
-  <% else %>
-    <p>Student</p>
-  <% end %>
-  <%= link_to "All teachers", users_path, class: "btn btn-primary" %>
+<div class="container">
+  <div class="card-details">
+    <div class="teacher-details">
+      <div class="teacher-profile-photo">
+      </div>
+      <div class="name-skills">
+        <h1><%= @user.first_name %></h1>
+        <p><%= @user.email %></p>
+      </div>
+    </div>
+    <div class="lesson-description">
+      <p>Teacher's description</p>
+    </div>
+    <div class="map">
+    </div>
+  </div>
+  <div class="buttons">
+    <%= link_to "All teachers", users_path, class: "btn btn-primary" %>
+    <%= link_to "Booking teacher", new_user_booking_path(@user), class: "btn btn-danger" %>
+  </div>
+</div>
 
