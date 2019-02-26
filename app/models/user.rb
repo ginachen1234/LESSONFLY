@@ -6,7 +6,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  has_many :bookings
+  has_many :teacher_bookings, class_name: "Booking", foreign_key: "teacher_id"
+  has_many :student_bookings, class_name: "Booking", foreign_key: "student_id"
 end
 
 # http://railscasts.com/episodes/163-self-referential-association
