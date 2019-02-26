@@ -4,4 +4,4 @@
   <p><%= @user.role %></p>
 
   <%= link_to "All teachers", users_path, class: "btn btn-primary" %>
-
+  <%= link_to "Booking teacher", user_bookings_path(@user), class: "btn btn-danger" %>
