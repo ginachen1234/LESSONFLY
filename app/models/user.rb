@@ -8,6 +8,10 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   has_many :teacher_bookings, class_name: "Booking", foreign_key: "teacher_id"
   has_many :student_bookings, class_name: "Booking", foreign_key: "student_id"
+
+  def teacher
+    returns User.where(role == "teacher")
+  end
 end
 
 # http://railscasts.com/episodes/163-self-referential-association
