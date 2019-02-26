@@ -1,7 +1,10 @@
   <h1><%= @user.first_name %></h1>
   <p><%= @user.last_name %></p>
   <p><%= @user.email %></p>
-  <p><%= @user.role %></p>
-
+  <% if @user.teacher %>
+    <p>Teacher</p>
+  <% else %>
+    <p>Student</p>
+  <% end %>
   <%= link_to "All teachers", users_path, class: "btn btn-primary" %>
 
