@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.teacher-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-story {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.skills {
+  width: 175px;
+}
+
+.teacher-photo-name {
+  display: flex;
+}
+
+.name-email {
+  padding: 0 30px;
+}
+
+.name-email > h1 {
+  font-size: 50px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.btn-primary {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.btn-danger {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+#teacher-profile-photo {
+  height: 175px;
+}
+
+.name-skills {
+  padding-top: 10px;
+}
+
+#map {
+  border-radius: 4px;
+  height: 500px;
+  width: auto;
+}
