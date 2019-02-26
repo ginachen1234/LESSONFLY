@@ -1,6 +1,18 @@
-<h1>My list of Teachers</h1>
-<% @users.each do |user| %>
-  <h2><%= user.first_name %></h2>
-  <h2><%= user.last_name %></h2>
-  <p><%= user.email %></p>
-<% end %>
+
+
+
+
+<div class="container d-flex justify-content-between">
+  <% @teachers.each do |user| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Teacher</h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= link_to user.first_name, user_path(user) %></h6>
+        <h6 class="card-subtitle mb-2 text-muted"><%= user.email %></h6>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+  </div>
+  <% end %>
+</div>
+
