@@ -1,22 +1,30 @@
-show-users
 <div class="container">
   <div class="card-details">
     <div class="teacher-details">
-      <div class="teacher-profile-photo">
+      <div class="teacher-photo-name">
+        <div class="profile-photo">
+          <img id="teacher-profile-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Antu_system-switch-user.svg/600px-Antu_system-switch-user.svg.png" alt="teacher profile photo">
+        </div>
+        <div class="name-email">
+          <h1><%= @user.first_name %></h1>
+        </div>
       </div>
-      <div class="name-skills">
-        <h1><%= @user.first_name %></h1>
-        <p><%= @user.email %></p>
+      <div class="skills-story">
+        <div class="skills">
+          <p><%= @user.skill %></p>
+        </div>
+        <div class="story">
+          <p>Teacher's Story</p>
+        </div>
       </div>
     </div>
-    <div class="lesson-description">
-      <p>Teacher's description</p>
-    </div>
+
     <div class="map">
+      <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/400x500?access_token=pk.eyJ1IjoiaGVjdG9yaGVybmFuZGV6cGVuYWRlcyIsImEiOiJjanJ3OGZteGYwOWE4NDN0ZnR2ZXhib21tIn0.sp-NxnyHCdtV4R4gIWzZNw'>
     </div>
   </div>
   <div class="buttons">
     <%= link_to "All teachers", users_path, class: "btn btn-primary" %>
-    <%= link_to "Booking teacher", user_bookings_path(@user), class: "btn btn-danger" %>
+    <%= link_to "Booking teacher", new_user_booking_path(@user), class: "btn btn-danger" %>
   </div>
 </div>
