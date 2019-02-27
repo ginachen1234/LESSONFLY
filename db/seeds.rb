@@ -8,6 +8,8 @@
  require 'faker'
 puts "Seeding"
 
+User.destroy_all
+
 5.times do
   User.create!(
     first_name: Faker::Name.name,
@@ -18,16 +20,60 @@ puts "Seeding"
     )
 end
 
-5.times do
-  User.create!(
+User.create!(
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
     skill: Faker::Educator.subject,
     location: Faker::Address.city,
-    teacher: true
-    )
-end
+    teacher: true,
+    address: "138 Kingsland Road, London"
+)
+
+User.create!(
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password,
+    skill: Faker::Educator.subject,
+    location: Faker::Address.city,
+    teacher: true,
+    address: "71 Hackney Road, London"
+)
+
+User.create!(
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password,
+    skill: Faker::Educator.subject,
+    location: Faker::Address.city,
+    teacher: true,
+    address: "38 Great Eastern St, London EC2A 3ES"
+)
+
+User.create!(
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password,
+    skill: Faker::Educator.subject,
+    location: Faker::Address.city,
+    teacher: true,
+    address: "49 Columbia Rd, London E2 7RG"
+)
+
+User.create!(
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password,
+    skill: Faker::Educator.subject,
+    location: Faker::Address.city,
+    teacher: true,
+    address: "80 Columbia Rd, London E2 7QB"
+)
+
 
 puts "Seed done!"

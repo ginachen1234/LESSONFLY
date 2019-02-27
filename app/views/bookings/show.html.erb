@@ -1,2 +1,13 @@
-<p>Your booking is with <%= @booking.teacher.first_name %></p>
-<p>Your booking is with <%= @booking.id %></p>
+<div class="container container-confirmation">
+  <h1>Great!</h1>
+  <div class="confirmation-card">
+    <div class="confirmation-text">
+      <h2>Your lesson booking id is <strong><%= @booking.id %></strong></h2>
+    <div class="confirmation-details">
+      <p>As soon as <strong><%= @booking.teacher.first_name %></strong> confirm your request, we will send you an email to <strong><u><%= @booking.student.email %></strong></u></p>
+    </div>
+  </div>
+  <div class="buttons-users-show">
+    <%= link_to "Go back", users_path, class: "btn btn-primary btn-all-teachers" %>
+  </div>
+</div>
