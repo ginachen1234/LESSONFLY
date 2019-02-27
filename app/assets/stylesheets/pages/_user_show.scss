@@ -40,11 +40,10 @@
   background-color: #F4F4F4;
   border-radius: 4px;
   padding: 10px 10px;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: bold;
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
 .teacher-photo-name {
@@ -52,38 +51,18 @@ h3 {
   padding: 20px 0 0 5px;
 }
 
-.name {
+.name-users-show  {
   padding: 0 30px;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-.buttons {
-  display: flex;
-  margin-top: 15px;
-}
-
-.btn-primary {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-.btn-danger {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-#teacher-profile-photo {
-  height: 175px;
+  h1 {
+    font-size: 50px;
+  }
 }
 
 .name-skills {
   padding-top: 10px;
 }
 
-#map {
+#map-users-show {
   border-radius: 8px;
   height: 500px;
   width: auto;
