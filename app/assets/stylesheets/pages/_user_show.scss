@@ -1,7 +1,7 @@
 .container-show {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 70px;
   padding: 20px 0;
 }
 
@@ -37,7 +37,7 @@
 .skills {
   position: relative;
   left: 5px;
-  width: 175px;
+  min-width: 180px;
   height: 280px;
   background-color: #F4F4F4;
   border-radius: 4px;
