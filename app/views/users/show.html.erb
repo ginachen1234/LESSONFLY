@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container container-show">
   <div class="card-details">
     <div class="teacher-details">
       <div class="teacher-photo-name">
@@ -25,9 +25,9 @@
       <img id="map-users-show" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/400x500?access_token=pk.eyJ1IjoiaGVjdG9yaGVybmFuZGV6cGVuYWRlcyIsImEiOiJjanJ3OGZteGYwOWE4NDN0ZnR2ZXhib21tIn0.sp-NxnyHCdtV4R4gIWzZNw'>
     </div>
   </div>
-  <div class="buttons-users-show ">
+  <div class="buttons-users-show">
     <%= link_to "All teachers", users_path, class: "btn btn-primary btn-all-teachers" %>
-    <%= link_to "Booking teacher", new_user_booking_path(@user), class: "btn btn-danger btn-booking-teacher" %>
+    <%= link_to "Book this teacher", new_user_booking_path(@user), class: "btn btn-danger btn-booking-teacher" %>
   </div>
 </div>
 

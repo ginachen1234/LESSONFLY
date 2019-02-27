@@ -1,11 +1,19 @@
-
-
-<p>You are going to make a booking with<%= @teacher.first_name %> <%= @teacher.last_name %></p>
-
-<%= simple_form_for [@user, @booking] do |f| %>
-  <%= f.input :teacher_id, :as => :hidden, :input_html => { :value => @teacher.id }%>
-  <%= f.submit "Confirm booking", class: "btn btn-primary" %>
-<% end %>
-
-
-<%= link_to "All teachers", users_path, class: "btn btn-primary" %>
+<div class="container container-confirmation">
+  <h1>You are almost there:</h1>
+  <div class="confirmation-card">
+    <div class="confirmation-text">
+      <h2>Please review and confirm your lesson details.</h2>
+    </div>
+    <div class="confirmation-details">
+      <p>You are interested in <strong><%= @teacher.skill %></strong> lessons.</p>
+      <h3><%= @teacher.first_name %> will be your teacher.</h3>
+    </div>
+  </div>
+  <div class="buttons-users-show">
+    <%= link_to "Go back", user_path(@user), class: "btn btn-primary btn-all-teachers" %>
+    <%= simple_form_for [@user, @booking] do |f| %>
+      <%= f.input :teacher_id, :as => :hidden, :input_html => { :value => @teacher.id }%>
+      <%= f.submit "Confirm this lesson", class: "btn btn-danger btn-booking-teacher" %>
+    <% end %>
+  </div>
+</div>
