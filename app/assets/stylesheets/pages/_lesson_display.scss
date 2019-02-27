@@ -1,44 +1,68 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
   padding: 20px 0;
 }
 
 .card-details {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
 }
 
 .teacher-details {
   display: flex;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 8px;
+  margin-right: 10px;
   flex-direction: column;
 }
 
 .skills-story {
   display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 20px;
+}
+
+.story {
+  margin: 0 5px 0 20px;
+  flex-grow: 1;
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  padding: 10px 10px;
 }
 
 .skills {
+  position: relative;
+  left: 5px;
   width: 175px;
+  height: 280px;
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .teacher-photo-name {
   display: flex;
+  padding: 20px 0 0 5px;
 }
 
-.name-email {
+.name {
   padding: 0 30px;
 }
 
-.name-email > h1 {
+h1 {
   font-size: 50px;
 }
 
 .buttons {
   display: flex;
+  margin-top: 15px;
 }
 
 .btn-primary {
@@ -60,7 +84,7 @@
 }
 
 #map {
-  border-radius: 4px;
+  border-radius: 8px;
   height: 500px;
   width: auto;
 }
