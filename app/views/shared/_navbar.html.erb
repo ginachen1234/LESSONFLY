@@ -1,4 +1,4 @@
-<div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon" style="<%= "background-color: transparent" if params[:action] == "home" %>">
+<div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon" style="<%= "background-color: transparent" if params[:action] == "home" %> ">
   <%= link_to "#", class: "navbar-brand" do %>
   <% end %>
 
@@ -9,8 +9,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", root_path, class: "nav-link" %>
+      <li class="nav-item">
+        <%= link_to "Home", root_path, class: "nav-link"%>
       </li>
       <li class="nav-item">
         <%= link_to "Teachers", users_path, class: "nav-link" %>
