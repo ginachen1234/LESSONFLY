@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :email, presence: true, uniqueness: true
@@ -8,6 +9,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   has_many :teacher_bookings, class_name: "Booking", foreign_key: "teacher_id"
   has_many :student_bookings, class_name: "Booking", foreign_key: "student_id"
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
 end
 
