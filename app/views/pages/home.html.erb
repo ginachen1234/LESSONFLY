@@ -1,5 +1,52 @@
 <div style="position: absolute;">
   <%= video_tag "timelapsesky.mp4", autoplay: "autoplay", id: "video", muted: true, width: "100%", loop: "true" %>
+
+  <div class="header-container">
+    <h1><b>LEssONFLY</b></h1>
+    <p>EARN SHARING PASSION, LEARN GAINING TWICE!</p>
+    <%= link_to "JOIN THE COMMUNITY!", users_path, class: 'btn btn-primary' %>
+  </div>
+  <div class="full_wrap" id="homepage_claim">
+    <div class="container text-center">
+      <h1 class="section_title">Welcome to LEssONFLY community!</h1>
+      <p class="normal_text">
+            Your extraordinary one on one fun tutoring experience start here! To be able to Learning Gaining Teaching.<br>You can create your own classes or attend someone else's trainings using our  platform to directly connect with the person from whenever you want!<br>Discover <span class="bold"><b>LESSONFLY</b></span> and start now your fun & enjoyable tutoring experience.
+      </p>
+    </div>
+    <div><h2 id="big_page_title_loop"><b>Highlights</b></h2></div>
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://static1.squarespace.com/static/56e2e0c520c6472a2586add2/56e2f5cf356fb08b31d52aaf/5bb37acbf4e1fcf778e3c968/1549888098421/computer-programmer-coding-on-laptop.jpg?format=1500w)">
+          <b>Computer Science</b>
+        </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.telegraph.co.uk/content/dam/luxury/2018/10/23/Lot-33-Papa-Ibra-Tall-The-Warrior-2_trans_NvBQzQNjv4BqodNcBcGl77MFNsXA9PO2XJYCQ1SCH6wXj7qdqY9PoCo.jpg?imwidth=450)">
+            <b>Art</b>
+        </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tropicsofmeta.files.wordpress.com/2015/06/marriage-sarcophagus.jpg)">
+           <b>History</b>
+        </div>
+    </div>
+    <!-- <div class="fader_overlay">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/6224/hands-people-woman-working.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+          <div class="container">
+            <h1>LESSONFY</h1>
+            <p>text</p>
+            <a class="btn btn-primary" href="/users">Find A Teacher</a>
+          </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="carousel">
+    <%= image_tag("slide1.jpg", class: "mySlides") %>
+    <%= image_tag("slide2.jpg", class: "mySlides") %>
+    <%= image_tag("slide3.jpg", class: "mySlides") %>
+    <div class="carousel-container">
+      <h1 class="carousel-container-item">LESSONFY</h1>
+      <p class="carousel-container-item">text</p>
+      <a class="btn btn-primary carousel-container-item" href="/users">Find A Teacher</a>
+    </div>
+  </div>
+</div>
   <div class="header-container">
     <h1><b>LESSONFLY</b></h1>
     <p>EARN SHARING PASSION, LEARN GAINING TWICE!</p>
@@ -22,7 +69,9 @@
 
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
             <b>Art</b>
-
+            
+            
+<%= javascript_pack_tag "carousel" %>
           </div>
 
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
@@ -30,3 +79,4 @@
        </div>
      </div>
 </div>
+

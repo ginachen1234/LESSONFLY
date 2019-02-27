@@ -1,0 +1,24 @@
+.mySlides {
+  width: 100%;
+}
+
+.carousel-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  max-width: 80%;
+  margin: 0px auto;
+}
+
+
+.carousel-container-item {
+  position: relative;
+  left: -50%;
+  text-align: center;
+}
