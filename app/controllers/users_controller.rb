@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def index
     User.reindex
     if params[:query].present?
-      @teachers = User.search(params[:query])
+      @teachers = User.search(params["#{:query}?size=5"])
       markers
     else
       @teachers = User.all.where.not(latitude: nil, longitude: nil).where(teacher: true)

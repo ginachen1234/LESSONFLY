@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
  require 'faker'
-puts "Seeding"
+puts "Seeding the DB..."
 
 User.destroy_all
 
@@ -16,65 +16,37 @@ User.destroy_all
     last_name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
+    biography: Faker::Quote.matz,
     teacher: false
     )
 end
 
-User.create!(
+25.times do
+  User.create!(
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
     skill: Faker::Educator.subject,
     location: Faker::Address.city,
+    biography: Faker::Quote.matz,
     teacher: true,
-    address: "138 Kingsland Road, London"
-)
+    address: "#{rand(1..512)} Kingsland Road, London"
+    )
+end
 
-User.create!(
+25.times do
+  User.create!(
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password,
     skill: Faker::Educator.subject,
     location: Faker::Address.city,
+    biography: Faker::Quote.matz,
     teacher: true,
-    address: "71 Hackney Road, London"
-)
-
-User.create!(
-    first_name: Faker::Name.name,
-    last_name: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: Faker::Internet.password,
-    skill: Faker::Educator.subject,
-    location: Faker::Address.city,
-    teacher: true,
-    address: "38 Great Eastern St, London EC2A 3ES"
-)
-
-User.create!(
-    first_name: Faker::Name.name,
-    last_name: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: Faker::Internet.password,
-    skill: Faker::Educator.subject,
-    location: Faker::Address.city,
-    teacher: true,
-    address: "49 Columbia Rd, London E2 7RG"
-)
-
-User.create!(
-    first_name: Faker::Name.name,
-    last_name: Faker::Name.name,
-    email: Faker::Internet.email,
-    password: Faker::Internet.password,
-    skill: Faker::Educator.subject,
-    location: Faker::Address.city,
-    teacher: true,
-    address: "80 Columbia Rd, London E2 7QB"
-)
-
-
+    address: "#{rand(1..300)} Hoxton Street, London"
+    )
+end
 
 puts "Seed done!"
