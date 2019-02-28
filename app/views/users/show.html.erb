@@ -28,8 +28,6 @@
   </div>
   <div class="buttons-users-show">
     <%= link_to "Back to teacher results", users_path, class: "btn btn-secondary btn-all-teachers" %>
-    <%= params[:id].class %>
-    <%= current_user.id.class %>
     <% if params[:id].to_i != current_user.id %>
       <%= link_to "Book this teacher", new_user_booking_path(@user), class: "btn btn-primary btn-booking-teacher" %>
     <% end %>
