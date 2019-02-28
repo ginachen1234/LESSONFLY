@@ -30,3 +30,11 @@
   </div>
 </div>
 
+<%= form_tag users_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find your teacher"
+  %>
+<% end %>
+
