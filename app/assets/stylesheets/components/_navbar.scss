@@ -1,12 +1,12 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  // justify-content: space-between;
   background-color: white;
   transition: 0.5s background-color ease;
   position: fixed; top:0; width:100%;
 }
 
 .nav-link {
-  color: #333;
+  color: #FFFFFF !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,11 +18,29 @@
 }
 
 .navbar-lewagon-grey {
-  background-color: #a1afad;
+  background-color: #B2E8EE !important;
+  opacity: 0.8;
   padding-top :5px;
 }
 
-.nav-link{
-  color: light-grey !important;
+.navbar-brand {
+  color: white !important;
 }
 
+.mr-left {
+  margin-left: auto;
+}
+
+.left-button{
+  margin-left: 24px;
+}
+
+.btn-ghost {
+  color: #FFFFFF;
+  border: 1px solid #FF3470;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}

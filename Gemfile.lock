@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/stympy/faker.git
-  revision: b944a95247d8d16262dcd6615a11f9379ea5d8db
+  revision: 6a75a789f4a8827cb7723f8394f82c607cf58af5
   branch: master
   specs:
     faker (1.9.3)
@@ -72,14 +72,25 @@ GEM
     dotenv-rails (2.7.1)
       dotenv (= 2.7.1)
       railties (>= 3.2, < 6.1)
+    elasticsearch (6.1.0)
+      elasticsearch-api (= 6.1.0)
+      elasticsearch-transport (= 6.1.0)
+    elasticsearch-api (6.1.0)
+      multi_json
+    elasticsearch-transport (6.1.0)
+      faraday
+      multi_json
     erubi (1.8.0)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
     geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hashie (3.6.0)
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
     jbuilder (2.8.0)
@@ -102,6 +113,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.6)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     nio4r (2.3.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
@@ -162,6 +174,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    searchkick (3.1.2)
+      activemodel (>= 4.2)
+      elasticsearch (>= 5)
+      hashie
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -219,6 +235,7 @@ DEPENDENCIES
   rails (= 5.2.2)
   redis
   sassc-rails
+  searchkick (~> 3.0)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
