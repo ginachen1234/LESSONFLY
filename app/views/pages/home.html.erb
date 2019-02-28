@@ -12,7 +12,7 @@
     <div class="new-search">
       <%= form_tag users_path, method: :get, class: "form search-skills" do %>
         <%= text_field_tag :query,
-          params[:query],
+          params["#{:query}?size=5"],
           class: "form-control search",
           placeholder: "Search Skills"
         %>
