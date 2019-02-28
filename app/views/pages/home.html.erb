@@ -1,6 +1,5 @@
 
-<div class="gradiant">
-</div>
+<div class="gradiant"></div>
   <div class="video">
   <%= video_tag "timelapsesky.mp4", autoplay: "autoplay", id: "video", muted: true, width: "100%", loop: "true", :class => "video"%>
   </div>
@@ -8,54 +7,62 @@
 
   <div class="header-container">
 
-    <h1><b>LEssONFLY</b></h1>
+    <h1><b>LessonFly</b></h1>
     <p>EARN SHARING PASSION, LEARN GAINING TWICE!</p>
-    <%= link_to "JOIN THE COMMUNITY!", users_path, class: 'btn btn-primary' %>
+    <div class="new-search">
+      <%= form_tag users_path, method: :get, class: "form search-skills" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control search",
+          placeholder: "Search Skills"
+        %>
+      <% end %>
+    </div>
   </div>
 
+<!--   <div class="search-bar">
+    <input type="text" placeholder="JOIN THE COMMUNITY....">
+    <div class="search"></div>
+  </div> -->
+      <div class="container text-center banner-2">
 
-
-  <div class="full_wrap" id="homepage_claim">
-
-      <div class="container text-center">
-
-            <h1 class="section_title">Welcome to LEssONFLY community!</h1>
+            <h1 class="section_title">Welcome to LessonFly community.</h1>
             <p class="normal_text">
                   Your extraordinary one on one fun tutoring experience start here! To be able to Learning Gaining Teaching.<br>You can create your own classes or attend someone else's trainings using our  platform to directly connect with the person from whenever you want!<br>Discover <span class="bold"><b>LESSONFLY</b></span> and start now your fun & enjoyable tutoring experience.
             </p>
 
       </div>
 
-  </div>
 
-      <hr class="line line-top line-bottom">
+      <!-- <hr class="line line-top1 "> -->
 
       <div class="row cards-landing-page">
 
-        <div class="col-lg-4 text-center card-landing">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Learn.</h2>
-          <p> Tutoring can help strengthen subject comprehension, boost confidence, and build important learning skills. Tutoring gives students individualized attention that they don't get in a crowded classroom.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4 text-center card-landing">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Teach.</h2>
+          <img class="rounded-circle" src="https://cdn.dribbble.com/users/1973532/screenshots/5059462/illustration_students.png" alt="Generic placeholder image" width="200" height="200">
+          <h1>Teach.</h1>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-secondary btn-card" href="#" role="button">View details</a></p>
         </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4 text-center card-landing">
-          <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <h2>Study.</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <img class="rounded-circle" src="https://cdn.dribbble.com/users/46302/screenshots/5092379/school.png" alt="Generic placeholder image" width="200" height="200">
+          <h1>Learn.</h1>
+          <p> Tutoring can help strengthen subject comprehension, boost confidence, and build important learning skills. Tutoring gives students individualized attention that they don't get in a crowded classroom.</p>
+          <p><a class="btn btn-secondary btn-card" href="#" role="button">View details</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4 text-center card-landing">
+          <img class="rounded-circle" src="https://cdn.dribbble.com/users/369527/screenshots/4347634/pietrasiak_data_center2.png" alt="Generic placeholder image" width="200" height="200">
+          <h1>Study.</h1>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-secondary btn-card" href="#" role="button">View details</a></p>
         </div><!-- /.col-lg-4 -->
 
       </div>
-
-      <hr class="line line-top line-bottom">
+<!--  -->
+      <!-- <hr class="line line-top line-bottom"> -->
       <!-- /.row -->
 
             <div class="row featurette">
@@ -64,11 +71,11 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-fluid mx-auto" src="https://images.unsplash.com/photo-1536762733888-d86cc96c10b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" alt="Generic placeholder image" style= "width: 500px; height: 500px; max-width: 100%;">
+          <img class="featurette-image img-fluid mx-auto" src="https://cdn.dribbble.com/users/70808/screenshots/5090953/graduate.jpg" alt="Generic placeholder image" style= "width: 500px; height: 500px; max-width: 100%; border-radius: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
         </div>
       </div>
 
-      <hr class="line line-top line-bottom">
+     <!--  <hr class="line line-top line-bottom"> -->
 
 
 
