@@ -14,6 +14,7 @@
         <%= link_to "Features",  root_path, class: "nav-link" %>
       </li>
 
+
       <li class="nav-item left-button btn-ghost">
         <%= link_to "Become Teacher", root_path, class: "nav-link" %>
       </li>
@@ -21,6 +22,25 @@
     </ul>
   </div>
   <div class="dropdown mr-left">
+
+      <li class="nav-item"><%= %></li>
+
+      <li class="nav-item left-button btn-ghost">
+        <% if !current_user %>
+          <%= link_to "Sign-up", new_user_registration_path, class: "nav-link" %>
+          <%= link_to "Log-in", new_user_session_path, class: "nav-link" %>
+        <% elsif !current_user.teacher %>
+          <%= link_to "My account", user_path(current_user), class: "nav-link" %>
+          <%= link_to "Become a teacher", edit_user_path(current_user), class: "nav-link" %>
+
+        <% else %>
+         <%= link_to "My account", user_path(current_user), class: "nav-link" %>
+
+        <% end %>
+      </li>
+
+      <li class="nav-item dropdown">
+
         <%= image_tag "https://images.unsplash.com/photo-1524593689594-aae2f26b75ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80", class: "avatar-nav dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
