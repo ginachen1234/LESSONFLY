@@ -1,0 +1,18 @@
+<div class="become-teacher-container">
+
+  <div class="form-become-teacher">
+    <%= simple_form_for [@user] do |f| %>
+      <h1><%= "Complete your profile to become a teacher" %></h1>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email %>
+      <%= f.input :teacher, as: :radio_buttons %>
+      <%= f.input :address %>
+      <%= f.input :location %>
+      <%= f.input :skill %>
+      <%= f.submit "Create", class: "btn btn-success" %>
+      <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+    <% end  %>
+  </div>
+</div>
+

@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   def index
     @teachers = User.where.not(latitude: nil, longitude: nil).where(teacher: true)
-
-    # @teachers = User.where.not(latitude: nil, longitude: nil)
-    # @teachers = User.where.not(latitude: nil, longitude: nil)
 
     @markers = @teachers.map do |teacher|
       {
@@ -11,11 +9,26 @@ class UsersController < ApplicationController
         lat: teacher.latitude
       }
     end
+  end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to user_path(current_user)
   end
 
   def show
     @user = User.find(params[:id])
     @markers = [{lng: @user.longitude,lat: @user.latitude}]
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :teacher, :address, :location, :skill)
   end
 end

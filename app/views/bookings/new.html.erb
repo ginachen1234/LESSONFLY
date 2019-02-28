@@ -6,14 +6,14 @@
     </div>
     <div class="confirmation-details">
       <p>You are interested in <strong><%= @teacher.skill %></strong> lessons.</p>
-      <h3><strong><%= @teacher.first_name %></strong> will be your teacher.</h3>
+      <h2><strong><%= @teacher.first_name %></strong> will be your teacher.</h2>
     </div>
   </div>
   <div class="buttons-users-show">
-    <%= link_to "Go back", user_path(@teacher), class: "btn btn-primary btn-all-teachers" %>
+    <%= link_to "Go back", user_path(@teacher), class: "btn btn-secondary btn-all-teachers" %>
     <%= simple_form_for [@user, @booking] do |f| %>
       <%= f.input :teacher_id, :as => :hidden, :input_html => { :value => @teacher.id }%>
-      <%= f.submit "Confirm this lesson", class: "btn btn-danger btn-booking-teacher" %>
+      <%= f.submit "Confirm this lesson", class: "btn btn-primary btn-booking-teacher" %>
     <% end %>
   </div>
 </div>
