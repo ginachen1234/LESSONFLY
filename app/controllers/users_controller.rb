@@ -16,5 +16,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @markers = [{lng: @user.longitude,lat: @user.latitude}]
   end
 end

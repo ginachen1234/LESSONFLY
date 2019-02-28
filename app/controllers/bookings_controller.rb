@@ -1,4 +1,13 @@
 class BookingsController < ApplicationController
+
+  def index
+    @user = current_user
+    @bookings = Booking.all
+    @teaching = User.where(skill: "Teaching")
+    redirect_to users_path if @bookings.empty?
+  end
+
+
   def show
     @booking = Booking.find(params[:id])
   end
@@ -21,9 +30,14 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @booking = Booking.find(params[:id])
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to user_bookings_path(current_user)
+
   end
 
   private

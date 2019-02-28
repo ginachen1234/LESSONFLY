@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only:[ :index, :show ] do
-    resources :bookings
+    resources :bookings, except: [ :destroy ]
   end
+  resources :bookings, only: [:destroy]
 end
+
