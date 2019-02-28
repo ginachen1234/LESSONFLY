@@ -15,8 +15,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  private
-
   def markers
     @markers = @teachers.map do |teacher|
       {
