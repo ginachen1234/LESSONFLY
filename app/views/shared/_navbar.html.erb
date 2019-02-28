@@ -13,7 +13,11 @@
         <%= link_to "Home", root_path, class: "nav-link"%>
       </li>
       <li class="nav-item">
-        <%= link_to "Teachers", users_path, class: "nav-link" %>
+        <% if params[:id] == nil %>
+          <%= link_to "Become a Teacher", new_user_session_path, class: "nav-link" %>
+        <% else %>
+          <%= link_to "Become a Teacher", edit_user_path(current_user), class: "nav-link" %>
+        <% end %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://images.unsplash.com/photo-1524593689594-aae2f26b75ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80", class: "avatar-nav dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
