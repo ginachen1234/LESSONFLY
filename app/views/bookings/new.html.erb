@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="buttons-users-show">
-    <%= link_to "Go back", user_path(@teacher), class: "btn btn-secondary btn-all-teachers" %>
+    <%= link_to "Go back", user_path(@teacher), class: "btn btn-user btn-all-teachers" %>
     <%= simple_form_for [@user, @booking] do |f| %>
       <%= f.input :teacher_id, :as => :hidden, :input_html => { :value => @teacher.id }%>
       <%= f.submit "Confirm", class: "btn btn-secondary btn-card btn-booking-teacher" %>
