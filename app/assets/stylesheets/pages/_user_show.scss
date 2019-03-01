@@ -79,3 +79,15 @@ div.map-user.mapboxgl-map {
   width: 30%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.btn-user{
+    color: #fff !important;
+    background-color: #797979;
+    border-color: #797979;
+}
+
+.btn-user:hover{
+    color: #fff !important;
+    background-color: #5E5E5E !important;
+    border-color: #5E5E5E !important;
+}
