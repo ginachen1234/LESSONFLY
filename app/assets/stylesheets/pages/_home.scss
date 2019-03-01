@@ -115,6 +115,20 @@
   width: 500px;
 }
 
-.form-control{
-  border: 1px solid #ff3470 !important;
+.search{
+  border: 3px solid #B2E8EE !important;
+  background-color: transparent;
+  border-radius: 30px;
+  height: 50px;
+}
+
+.search:focus {
+    color: white;
+    background-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.text-muted{
+  color: #B2E8EE !important;
 }
