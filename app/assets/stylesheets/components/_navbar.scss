@@ -2,11 +2,13 @@
   // justify-content: space-between;
   background-color: white;
   transition: 0.5s background-color ease;
-  position: fixed; top:0; width:100%;
+  position: fixed;
+  top:0;
+  width:100%;
 }
 
 .nav-link {
-  color: #FF3470 !important;
+  color: #B2E8EE !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,11 +19,11 @@
   width: 40px;
 }
 
-.navbar-lewagon-grey {
-  background-color: #B2E8EE !important;
-  opacity: 0.8;
-  padding-top :5px;
-}
+// .navbar-lewagon-grey {
+//   background-color: #B2E8EE !important;
+//   opacity: 0.8;
+//   padding-top :5px;
+// }
 
 .navbar-brand {
   color: white !important;
@@ -38,9 +40,9 @@
 
 .btn-ghost {
   color: #FFFFFF;
-  border: 1px solid #FF3470;
+  border: 2px solid #B2E8EE;
   border-radius: 10px;
-  font-weight: lighter;
+  font-weight: bold;
   transition: opacity 0.3s ease;
   font-size: 14px;
 }
