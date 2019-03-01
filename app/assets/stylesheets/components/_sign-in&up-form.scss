@@ -1,6 +1,9 @@
 .sign-in-container {
-  display: block;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  // margin-top: 80px;
 }
 
 .form-signin {
@@ -33,13 +36,18 @@ input.btn {
   font-size: 20px;
   letter-spacing: 2px;
 }
+
+div.btn.btn-secondary.btn-card.btn-booking-teacher.sign {
+  margin: 10px 0 10px 0;
+}
+
 label.form-check-label.boolean.optional {
   color: #585A63;
 }
 
 
 div.form-check {
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   border-bottom: #767676 solid 1px;
 }
 
