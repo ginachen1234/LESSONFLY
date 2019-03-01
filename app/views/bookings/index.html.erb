@@ -1,128 +1,56 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<div class="bookings-container">
+  <div class="list-of-bookings">
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+      <div class = user-welcome>
+     <h3>WELCOME BACK! <b><%= @user.first_name%></h3></b>
+      <br><h4> <p>Your account name:<%= @user.email%></h4>
+      </div>
+      <div class="cards-bookings style="width: 18rem;">
+       <div class="card-body">
 
-<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
-<div class="container">
-  <div class="row user-menu-container square">
-    <div class="col-md-7 user-details">
-      <div class="row coralbg white">
-        <div class="col-md-6 no-pad">
-          <div class="user-pad">
-            <h3>WELCOME BACK! <b><%= @user.first_name%></h3></b>
-            <br>
-            <h4 class="white"> <p>Account:<%= @user.email%></h4>
-            <a type="button" class="btn btn-labeled btn-info" href="<%= edit_user_registration_path %>">
-              <span class="btn-label"><i class="fa fa-pencil"></i></span>Upload You Picture Here
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 no-pad">
-          <div class="user-image">
-            <img class="teacher-profile-photo" src="<%= current_user.photo.url ||
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Antu_system-switch-user.svg/600px-Antu_system-switch-user.svg.png' %>" alt="teacher profile photo">
-          </div>
-        </div>
-      </div>
-      <div class="row overview">
-        <div class="col-md-4 user-pad text-center">
-          <h3>FOLLOWERS</h3>
-          <h4>2,784</h4>
-        </div>
-        <div class="col-md-4 user-pad text-center">
-            <h3>FOLLOWING</h3>
-            <h4>456</h4>
-        </div>
-        <div class="col-md-4 user-pad text-center">
-            <h3>APPRECIATIONS</h3>
-            <h4>4,901</h4>
-        </div>
-      </div>
-      <div>
-        <div class="cards">
         <% @bookings.each do |booking| %>
-          <div class="card-category"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://sa.kapamilya.com/absnews/abscbnnews/media/news-special1/world/10/3/teacher-100316.jpg)">
-              <%= User.find(booking.teacher_id).first_name %>
-              <br>
-              <%= link_to "add bookings", users_path %>
-              <br>
-              <%= link_to "delete the booking", booking_path(booking), method: :delete %>
-          </div>
+
+
+        <h1 class="booking-info"><p>Your teacher for the booking is </p><%= User.find(booking.teacher_id).first_name %></h1>
+
+
+        <br><%= link_to "add bookings", users_path %>
+        <br><%= link_to "delete the booking", booking_path(booking), method: :delete %>
         <% end %>
-        </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="profile-section">
+
+    <div id="profile-image">
+    <%= cl_image_tag current_user.photo%>
+    </div>
+
+    <div id="personal-info">
+      <div class = upload-picture >
+        <%= link_to edit_user_registration_path do %>
+        <button type="button" class="btn btn-secondary"
+         <span class="btn-label"><i class="fa fa-pencil"></i></span>Upload You Picture Here</button>
+        <% end %>
+
+
+
+
       </div>
+
     </div>
-
-        <div class="col-md-5 user-menu user-pad">
-          <center>
-
-            <div class="user-menu-content active">
-                <h3>
-                    Recent Activities
-                </h3>
-                <ul class="user-menu-list">
-
-                        <button type="button" class="btn btn-labeled btn-success" href="#">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>View activities</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="user-menu-content">
-                <h3>
-                    Messages
-                </h3>
-                <ul class="user-menu-list">
-
-                        <button type="button" class="btn btn-labeled btn-success" href="#">
-                            <span class="btn-label"><i class="fa fa-envelope-o"></i></span>View All Messages</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="user-menu-content">
-                <h3>
-                    Related Courses
-                </h3>
-                <% if @bookings.first.teacher.skill == "Biomedical Science" %>
-                    <% @teaching.each do |teacher| %>
-                    <%= teacher.skill %>
-                    <% end %>
-                    <% else %>
-                <% end %>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="view">
-
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="view">
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-          </center>
-            <div class="user-menu-content">
-                <h2 class="text-center">
-                    START SHARING
-                </h2>
-                <center><i class="fa fa-cloud-upload fa-4x"></i></center>
-                <div class="share-links">
-                    <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#" style="margin-bottom: 15px;">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>A FINISHED PROJECT
-                    </button></center>
-                    <center><button type="button" class="btn btn-lg btn-labeled btn-success" href="#">
-                            <span class="btn-label"><i class="fa fa-bell-o"></i></span>A WORK IN PROGRESS
-                    </button></center>
-
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
 </div>
+
+</div>
+
+
