@@ -1,4 +1,4 @@
-<div class="sign-in-container">
+<div class="container container-confirmation sign-in-container">
   <div class="form-signin">
     <h1>Sign up</h1>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -38,7 +38,7 @@
     <div class="checkbox mb-3">
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
-    <div class="btn btn-lg btn-primary btn-block"><%= f.button :submit, "Sign up" %></div>
+    <div class="btn btn-secondary btn-card btn-booking-teacher sign"><%= f.button :submit, "Sign up" %></div>
     <% end %>
   </div>
 </div>
