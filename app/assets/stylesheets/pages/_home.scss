@@ -11,9 +11,9 @@
     margin-right: auto;
     background-color: white;
     width: 1200px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 550px;
+    margin-bottom: 250px;
+    height: 650px;
+    padding-top:150px;
 }
 
 #homepage_claim{
@@ -86,8 +86,8 @@
 
 .text-center{
   position: relative;
-  top: -100px;
-  margin-bottom: 150px;
+  top: -55px;
+  margin-bottom: 100px;
 }
 
 .banner-2 p{
@@ -102,14 +102,14 @@
 }
 
 .btn-card{
-  background-color: #FF3470;
+  background-color: #99C6CA;
   border-color: transparent;
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #99C6CA;
-    border-color: #99C6CA;
+    background-color: #FF3470;
+    border-color: #FF3470;
 }
 
 
@@ -137,4 +137,8 @@
 
 .text-muted{
   color: #B2E8EE !important;
+}
+
+.search::placeholder{
+  color: white !important;
 }
