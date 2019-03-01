@@ -1,3 +1,8 @@
+.navbar-lewagon-grey{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white !important;
+}
+
 .navbar-lewagon {
   // justify-content: space-between;
   background-color: white;
@@ -34,8 +39,13 @@
   display: flex;
 }
 
+.btn-right-margin{
+    margin-right: 25px;
+}
+
 .left-button{
   margin-left: 24px;
+
 }
 
 .btn-ghost {
@@ -45,4 +55,11 @@
   font-weight: bold;
   transition: opacity 0.3s ease;
   font-size: 14px;
+}
+
+.logo{
+  font-size: 30px;
+  color: #B2E8EE !important;
+  font-weight: bold;
+  font-variant: small-caps;
 }

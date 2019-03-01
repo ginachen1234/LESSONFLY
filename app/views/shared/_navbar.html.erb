@@ -1,6 +1,6 @@
 <div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon" style="<%= "background-color: transparent" if params[:action] == "home" %> ">
 
-  <%= link_to "Logo", root_path, class: "navbar-brand"%>
+  <%= link_to "LessonFly", root_path, class: "navbar-brand logo"%>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="navbar-nav">
 
-      <div class="nav-item left-button btn-ghost" id="scroll">
+      <div class="nav-item btn-ghost" id="scroll">
         <a class="nav-link" href="#">Features</a>
       </div>
     </div>
@@ -31,9 +31,11 @@
         </div>
 
       <% elsif !current_user.teacher %>
-          <div class="nav-item left-button btn-ghost">
+          <div class="nav-item left-button btn-right-margin btn-ghost">
             <%= link_to "Become a teacher", edit_user_path(current_user), class: "nav-link" %>
           </div>
+
+        <!--         "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>)" -->
 
         <%= image_tag "https://images.unsplash.com/photo-1524593689594-aae2f26b75ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80", class: "avatar-nav dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
