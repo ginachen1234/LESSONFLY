@@ -3,14 +3,13 @@
   <div class="confirmation-card">
     <div class="confirmation-text">
       <h2>Your lesson booking id is <strong><%= @booking.id %></strong></h2>
+    </div>
     <div class="confirmation-details">
-      <p>As soon as <strong><%= @booking.teacher.first_name %></strong> confirm your request, we will send you an email to <strong><u><%= @booking.student.email %></strong></u></p>
+      <p>As soon as <strong><%= @booking.teacher.first_name %></strong> confirms your request, we will send you an email to <strong><u><%= @booking.student.email %></strong></u></p>
     </div>
   </div>
   <div class="buttons-users-show">
-    <%= link_to "Go back", users_path, class: "btn btn-primary btn-all-teachers" %>
-  </div>
-  <div class="buttons-users-show">
-    <%= link_to "View all the bookings", user_bookings_path, class: "btn btn-primary btn-all-teachers" %>
+    <%= link_to "Go to home page", root_path, class: "btn btn btn-user btn-all-teachers" %>
+    <%= link_to "See my requests", user_bookings_path, class: "btn btn-secondary btn-card btn-booking-teacher" %>
   </div>
 </div>

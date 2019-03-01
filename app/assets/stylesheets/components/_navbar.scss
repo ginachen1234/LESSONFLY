@@ -1,12 +1,19 @@
+.navbar-lewagon-grey{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white !important;
+}
+
 .navbar-lewagon {
-  justify-content: space-between;
+  // justify-content: space-between;
   background-color: white;
   transition: 0.5s background-color ease;
-  position: fixed; top:0; width:100%;
+  position: fixed;
+  top:0;
+  width:100%;
 }
 
 .nav-link {
-  color: #333;
+  color: #B2E8EE !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,12 +24,52 @@
   width: 40px;
 }
 
-.navbar-lewagon-grey {
-  background-color: #a1afad;
-  padding-top :5px;
+// .navbar-lewagon-grey {
+//   background-color: #B2E8EE !important;
+//   opacity: 0.8;
+//   padding-top :5px;
+// }
+
+.navbar-brand {
+  color: white !important;
 }
 
-.nav-link{
-  color: light-grey !important;
+.mr-left {
+  margin-left: auto;
+  display: flex;
 }
 
+.btn-right-margin{
+    margin-right: 25px;
+}
+
+.left-button{
+  margin-left: 24px;
+
+}
+
+.btn-ghost {
+  color: #FFFFFF;
+  border: 2px solid #B2E8EE;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}
+
+.logo{
+  font-size: 30px;
+  color: #B2E8EE !important;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    top: 69px;
+}

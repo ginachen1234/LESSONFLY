@@ -33,13 +33,16 @@
   border-radius: 4px;
   padding: 10px 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h3 {
+    border-bottom: #e5e5e5 solid 0.5px;
+  }
 }
 
 .skills {
   position: relative;
   left: 5px;
-  min-width: 180px;
-  height: 280px;
+  min-width: 170px;
+  height: 240px;
   background-color: #F4F4F4;
   border-radius: 4px;
   padding: 10px 10px;
@@ -47,6 +50,8 @@
   h3 {
     font-size: 20px;
     font-weight: bold;
+    padding-top: 9px;
+    border-bottom: #e5e5e5 solid 0.5px;
   }
 }
 
@@ -56,6 +61,8 @@
 }
 
 .name-users-show  {
+  display: flex;
+  align-items: center;
   padding: 0 30px;
   h1 {
     font-size: 50px;
@@ -66,9 +73,21 @@
   padding-top: 10px;
 }
 
-#map-users-show {
+div.map-user.mapboxgl-map {
   border-radius: 8px;
-  height: 500px;
-  width: auto;
+  height: 460px !important;
+  width: 30%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.btn-user{
+    color: #fff !important;
+    background-color: #797979;
+    border-color: #797979;
+}
+
+.btn-user:hover{
+    color: #fff !important;
+    background-color: #5E5E5E !important;
+    border-color: #5E5E5E !important;
 }

@@ -1,19 +1,18 @@
 <div class="container container-confirmation">
-  <h1>You are almost there:</h1>
+  <h1>You are almost there...</h1>
   <div class="confirmation-card">
     <div class="confirmation-text">
-      <h2>Please review and confirm your lesson details.</h2>
+      <h2>Please review and confirm your request's details:</h2>
     </div>
     <div class="confirmation-details">
-      <p>You are interested in <strong><%= @teacher.skill %></strong> lessons.</p>
-      <h2><strong><%= @teacher.first_name %></strong> will be your teacher.</h2>
+      <h2><strong><%= @teacher.skill %></strong> lessons with <strong><%= @teacher.first_name %></strong></h2>
     </div>
   </div>
   <div class="buttons-users-show">
-    <%= link_to "Go back", user_path(@teacher), class: "btn btn-secondary btn-all-teachers" %>
+    <%= link_to "Go back", user_path(@teacher), class: "btn btn-user btn-all-teachers" %>
     <%= simple_form_for [@user, @booking] do |f| %>
       <%= f.input :teacher_id, :as => :hidden, :input_html => { :value => @teacher.id }%>
-      <%= f.submit "Confirm this lesson", class: "btn btn-primary btn-booking-teacher" %>
+      <%= f.submit "Confirm", class: "btn btn-secondary btn-card btn-booking-teacher" %>
     <% end %>
   </div>
 </div>

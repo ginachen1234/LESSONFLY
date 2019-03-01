@@ -1,6 +1,6 @@
 <div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon" style="<%= "background-color: transparent" if params[:action] == "home" %> ">
-  <%= link_to "#", class: "navbar-brand" do %>
-  <% end %>
+
+  <%= link_to "LessonFly", root_path, class: "navbar-brand logo"%>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,24 +8,74 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "Home", root_path, class: "nav-link"%>
-      </li>
-      <li class="nav-item">
-        <% if params[:id] == nil %>
-          <%= link_to "Become a Teacher", new_user_session_path, class: "nav-link" %>
-        <% else %>
-          <%= link_to "Become a Teacher", edit_user_path(current_user), class: "nav-link" %>
-        <% end %>
-      </li>
-      <li class="nav-item dropdown">
+    <div class="navbar-nav">
+
+      <div class="nav-item btn-ghost" id="scroll">
+
+        <a class="nav-link" href="#scroll-down">Features</a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="dropdown mr-left nav-item">
+
+      <% if !current_user %>
+
+        <div class="nav-item left-button btn-ghost">
+            <%= link_to "Sign-up", new_user_registration_path, class: "nav-link" %>
+        </div>
+
+        <div class="nav-item left-button btn-ghost">
+            <%= link_to "Log-in", new_user_session_path, class: "nav-link" %>
+        </div>
+
+      <% elsif !current_user.teacher %>
+          <div class="nav-item left-button btn-right-margin btn-ghost">
+            <%= link_to "Become a teacher", edit_user_path(current_user), class: "nav-link" %>
+          </div>
+
+        <!--         "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?{drink},{cocktail}<%= (1..10000).to_a.sample %>)" -->
+
         <%= image_tag "https://images.unsplash.com/photo-1524593689594-aae2f26b75ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80", class: "avatar-nav dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
+          <%= link_to "My account", user_path(current_user), class: "nav-link" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
-      </li>
-    </ul>
+
+
+        </div>
+
+      <% else %>
+
+      <div class="nav-item dropdown">
+
+        <%= image_tag "https://images.unsplash.com/photo-1524593689594-aae2f26b75ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80", class: "avatar-nav dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "My account", user_path(current_user), class: "nav-link" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+
+      </div>
+
+
+      <% end %>
+
   </div>
 </div>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>

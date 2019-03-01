@@ -1,6 +1,9 @@
 .sign-in-container {
-  display: block;
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  // margin-top: 80px;
 }
 
 .form-signin {
@@ -18,24 +21,33 @@
     border-bottom: #767676 solid 1px;
     margin-bottom: 20px;
   }
+  h2 {
+    color: #585A63;
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: #767676 solid 1px;
+    margin-bottom: 20px;
+  }
 }
+
 input.btn {
   color: white;
   font-weight: lighter;
   font-size: 20px;
   letter-spacing: 2px;
 }
+
+div.btn.btn-secondary.btn-card.btn-booking-teacher.sign {
+  margin: 10px 0 10px 0;
+}
+
 label.form-check-label.boolean.optional {
   color: #585A63;
 }
 
-small.form-text.text-muted {
-
-}
-
 
 div.form-check {
-  padding-bottom: 30px;
+  // margin-bottom: 10px;
   border-bottom: #767676 solid 1px;
 }
 

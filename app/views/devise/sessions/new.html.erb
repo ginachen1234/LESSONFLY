@@ -1,7 +1,8 @@
-<div class="sign-in-container">
+<div class="container container-confirmation sign-in-container">
   <div class="form-signin">
     <h1>Log in</h1>
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %><%= f.error_notification %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
     <div class="form-label-group">
       <%= f.input :email,
                       required: false,
@@ -19,7 +20,7 @@
     <div class="checkbox mb-3">
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
-    <div class="btn btn-lg btn-primary btn-block"><%= f.button :submit, "Sign in" %></div>
+    <div class="btn btn-secondary btn-card btn-booking-teacher sign"><%= f.button :submit, "Sign in" %></div>
     <div class="sign-up-forgot"><%= render "devise/shared/links" %></div>
     <% end %>
   </div>

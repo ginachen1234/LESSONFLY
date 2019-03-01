@@ -5,7 +5,7 @@
         <div class="profile-photo">
           <img class="teacher-profile-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Antu_system-switch-user.svg/600px-Antu_system-switch-user.svg.png" alt="teacher profile photo">
         </div>
-        <div class="name-users-show ">
+        <div class="name-users-show">
           <h1><%= @user.first_name %></h1>
         </div>
       </div>
@@ -16,22 +16,20 @@
         </div>
         <div class="story">
           <h3>About me:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+          <p><%= @user.biography %></p>
         </div>
       </div>
     </div>
-       <div
+       <div class="map-user"
       id="map"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       data-markers="<%= @markers.to_json %>"
       ></div>
   </div>
   <div class="buttons-users-show">
-    <%= link_to "Back to teacher results", users_path, class: "btn btn-secondary btn-all-teachers" %>
-    <%= params[:id].class %>
-    <%= current_user.id.class %>
+    <%= link_to "Back to teacher search", users_path, class: "btn btn-all-teachers btn-user" %>
     <% if params[:id].to_i != current_user.id %>
-      <%= link_to "Book this teacher", new_user_booking_path(@user), class: "btn btn-primary btn-booking-teacher" %>
+      <%= link_to "Request this teacher", new_user_booking_path(@user), class: "btn btn-secondary btn-card btn-booking-teacher" %>
     <% end %>
   </div>
 
