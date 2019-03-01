@@ -3,16 +3,50 @@
   <div class="form-become-teacher">
     <%= simple_form_for [@user] do |f| %>
       <h1><%= "Complete your profile to become a teacher" %></h1>
-      <%= f.input :first_name %>
-      <%= f.input :last_name %>
-      <%= f.input :email %>
-      <%= f.input :teacher, as: :radio_buttons %>
-      <%= f.input :address %>
-      <%= f.input :location %>
-      <%= f.input :skill %>
-      <%= f.submit "Create", class: "btn btn-success" %>
-      <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+      <%= f.input :first_name,
+                      required: true,
+                      label: false,
+                      placeholder: 'First name',
+                      autofocus: true,
+                      input_html: { autocomplete: "first-name" }%>
+      <%= f.input :last_name,
+                      required: true,
+                      label: false,
+                      placeholder: 'Last name',
+                      autofocus: true,
+                      input_html: { autocomplete: "last-name" }%>
+      <%= f.input :email,
+                      required: true,
+                      label: false,
+                      placeholder: 'Email address',
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+      <%= f.input :teacher, as: :radio_buttons,
+                      label: "Do you want to become a teacher?" %>
+      <%= f.input :address,
+                      required: true,
+                      label: false,
+                      placeholder: 'Your address',
+                      autofocus: true,
+                      input_html: { autocomplete: "address" }%>
+      <%= f.input :skill,
+                      required: true,
+                      label: false,
+                      placeholder: 'What do you want to teach?',
+                      autofocus: true,
+                      input_html: { autocomplete: "skill" }%>
+      <%= f.input :biography,
+                      required: true,
+                      label: false,
+                      placeholder: 'Tell us more about you, this information will help the students to choose you',
+                      autofocus: true,
+                      input_html: { autocomplete: "skill" }%>
+
+      <div class="buttons-users-show">
+      <%= f.button :button, "Cancel", type: "reset", class: "btn btn-secondary btn-all-teachers" %>
+      <%= f.submit "Create", class: "btn btn-secondary btn-card btn-booking-teacher" %>
     <% end %>
+      </div>
   </div>
 </div>
 
