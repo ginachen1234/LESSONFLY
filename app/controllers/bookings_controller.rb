@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 
   def index
     @user = current_user
-    @bookings = Booking.all
+    @bookings = Booking.all.where(student: current_user)
     @teaching = User.where(skill: "Teaching")
     redirect_to users_path if @bookings.empty?
   end
