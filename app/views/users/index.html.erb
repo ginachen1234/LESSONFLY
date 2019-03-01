@@ -4,7 +4,7 @@
   <% @teachers.each do |user| %>
 
     <div class="card-teacher">
-      <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+      <%= cl_image_tag(user.photo, width: 400, height: 300) %>
       <div class="card-teacher-infos">
         <div>
           <h2><%= link_to user.skill, user_path(user) %></h2>
