@@ -6,16 +6,17 @@
           <img class="teacher-profile-photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Antu_system-switch-user.svg/600px-Antu_system-switch-user.svg.png" alt="teacher profile photo">
         </div>
         <div class="name-users-show">
-          <h1><%= @user.first_name %></h1>
+          <h1><%= @user.skill %></h1>
+          <h3><%= @user.first_name %></h3>
+        </div>
+        <div class="price">
+          <h3>£<%= (20..50).to_a.sample %></h3><h2>an hour</h2>
         </div>
       </div>
-      <div class="skills-story">
-        <div class="skills">
-          <h3>What I teach:</h3>
-          <p><%= @user.skill %></p>
-        </div>
+      <div class="price-story">
         <div class="story">
-          <h3>About me:</h3>
+          <h3>About me</h3>
+          <hr class="line-show">
           <p><%= @user.biography %></p>
         </div>
       </div>
